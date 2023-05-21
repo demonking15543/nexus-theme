@@ -3,9 +3,12 @@ import "./globals.css";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { darkTheme } from "./theme/themes";
 import Navbar from "./Compoents/Navbar/Navbar";
+import { useState } from "react";
 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const [toggleDark, settoggleDark] = useState(false);
+
   return (
     <html lang="en">
       <head>
@@ -17,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
         <body>
-        <Navbar/>
+        <Navbar />
 
           {children}
           </body>
