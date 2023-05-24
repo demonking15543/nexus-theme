@@ -18,20 +18,20 @@ const MenuItems = ({ items, depthLevel }) => {
         ref.current &&
         !ref.current.contains(event.target)
       ) {
-        setDropdown(false);
+        setDropdown(false);  
       }
     };
-    document.addEventListener('mousedown', handler);
-    document.addEventListener('touchstart', handler);
+    document.addEventListener('mousedown', handler);     //on hover drop the menu
+    document.addEventListener('touchstart', handler);    // on touch drop the menu
     return () => {
       // Cleanup the event listener
-      document.removeEventListener('mousedown', handler);
-      document.removeEventListener('touchstart', handler);
+      document.removeEventListener('mousedown', handler); // on hover close the  dropdown menu action
+      document.removeEventListener('touchstart', handler); // on touce close the dropdown menu action
     };
   }, [dropdown]);
 
   const onMouseEnter = () => {
-    window.innerWidth > 960 && setDropdown(true);
+    window.innerWidth > 960 && setDropdown(true); 
   };
 
   const onMouseLeave = () => {
