@@ -127,6 +127,15 @@ export default function Navbar() {
             <MailIcon />
           </Badge>
         </IconButton>
+        <p>Dropdown</p>
+      </MenuItem>
+      
+      <MenuItem>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="error">
+            <MailIcon />
+          </Badge>
+        </IconButton>
         <p>Messages</p>
       </MenuItem>
       <MenuItem>
@@ -153,6 +162,8 @@ export default function Navbar() {
         </IconButton>
         <p>Profile</p>
       </MenuItem>
+
+      
     </Menu>
   );
 

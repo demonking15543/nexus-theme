@@ -1,7 +1,10 @@
 import React from 'react'
-
+import Header from '../Compoents/Headers/Header'
 export default function index() {
   return (
-    <div>index</div>
+    <div>
+
+      <Header/>
+    </div>
   )
 }
