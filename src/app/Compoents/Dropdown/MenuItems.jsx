@@ -18,7 +18,7 @@ const MenuItems = ({ items, depthLevel }) => {
         ref.current &&
         !ref.current.contains(event.target)
       ) {
-        setDropdown(false);  
+        setDropdown(false);    //close dropdown
       }
     };
     document.addEventListener('mousedown', handler);     //on hover drop the menu
